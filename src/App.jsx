@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Layout from './pages/Layout';
-import Home from './pages/Home';
+import Home from  './pages/home';
 import SiteProject from './pages/siteProject';
 
 function App() {

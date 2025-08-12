@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.dark  {
+  background-color: #000000;
+}
+
+/* Main content should take full width */
+.main-content {
+    margin-left: var(--sidebar-width); /* Use your sidebar width variable */
+    transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.sidebar-collapsed .main-content {
+    margin-left: 60px; /* collapsed width */
+}
+
+
+
+/* Optional: Hover effect for rows in dark mode */
+.dark table tbody tr:hover {
+  background-color: #2a2a2a;
+}

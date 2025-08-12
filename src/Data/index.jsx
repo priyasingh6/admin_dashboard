@@ -1,4 +1,22 @@
-// Sample data matching the image
+
+import { 
+  LayoutGrid, 
+  MessageSquare, 
+  Building2, 
+  Users, 
+  Network, 
+  ShoppingCart, 
+  CreditCard, 
+  Gift, 
+  Upload, 
+  Send, 
+  Package, 
+  Archive, 
+  Clock, 
+  LogIn, 
+  Calendar,
+} from 'lucide-react';
+
 export const projects = [
   {
     id: 1,
@@ -6,7 +24,7 @@ export const projects = [
     createdBy: 'Abacus Test User',
     type: 'Residential',
     priority: 'Warm',
-    owner: 'Maninder Singh',
+    owner: 'Name Singh',
     mobile: '+91 ***** *****',
     address: 'Sector 8, Faridab...',
   },
@@ -142,28 +160,25 @@ export const projects = [
   },
 ];
 
-export const tabs = ['ALL', 'PENDING', 'APPROVED', 'REJECT', 'SUSPECT'];
 
-export const sidebarItems = [
-  { icon: '📊', label: 'Dashboard', active: false },
-  { icon: '❓', label: 'Enquiry', active: false },
-  { icon: '🏢', label: 'Site/Project', active: true },
-  { icon: '👥', label: 'Influencer Network', expandable: true },
-  { icon: '🌐', label: 'Customer Network', expandable: true },
-  { icon: '📦', label: 'Orders', expandable: true },
-  { icon: '💰', label: 'Accounts', expandable: true },
-  { icon: '🎯', label: 'Schemes/Incentive', expandable: true },
-  { icon: '📤', label: 'Secondary Billing Upload', active: false },
-  { icon: '🚚', label: 'Dispatch', active: false },
-  { icon: '📋', label: 'Master Box', active: false },
-  { icon: '📊', label: 'Stock', active: false },
-  { icon: '👤', label: 'Attendance', active: false },
-  { icon: '✅', label: 'Checkin', active: false },
-  { icon: '🏃', label: 'Leave', active: false },
-].map((item) => ({
-  ...item,
-  to:
-    item.label === 'Dashboard'
-      ? '/' // root path for dashboard
-      : '/' + item.label.toLowerCase().replace(/\//g, '-').replace(/\s+/g, '-'),
-}));
+const SidebarItems = [
+  { icon: <LayoutGrid size={16} />, label: 'Dashboard', to: '/', expandable: false },
+  { icon: <MessageSquare size={16} />, label: 'Enquiry', to: '/enquiry', expandable: false },
+  { icon: <Building2 size={16} />, label: 'Site/Project', to: '/site-project', expandable: false },
+  { icon: <Users size={16} />, label: 'Influencer Network', to: '/influencer-network', expandable: false },
+  { icon: <Network size={16} />, label: 'Customer Network', to: '/customer-network', expandable: false },
+  { icon: <ShoppingCart size={16} />, label: 'Orders', to: '/orders', expandable: false },
+  { icon: <CreditCard size={16} />, label: 'Accounts', to: '/accounts', expandable: false },
+  { icon: <Gift size={16} />, label: 'Schemes/Incentive', to: '/schemes-incentive', expandable: false },
+  { icon: <Upload size={16} />, label: 'Secondary Billing Upload', to: '/secondary-billing', expandable: false },
+  { icon: <Send size={16} />, label: 'Dispatch', to: '/dispatch', expandable: false },
+  { icon: <Package size={16} />, label: 'Master Box', to: '/master-box', expandable: false },
+  { icon: <Archive size={16} />, label: 'Stock', to: '/stock', expandable: false },
+  { icon: <Clock size={16} />, label: 'Attendance', to: '/attendance', expandable: false },
+  { icon: <LogIn size={16} />, label: 'Checkin', to: '/checkin', expandable: false },
+  { icon: <Calendar size={16} />, label: 'Leave', to: '/leave', expandable: false }
+];
+
+export default SidebarItems;
+
+export const tabs = ['ALL', 'PENDING', 'APPROVED', 'REJECT', 'SUSPECT']

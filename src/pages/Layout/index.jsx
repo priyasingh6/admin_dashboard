@@ -9,9 +9,9 @@ function Layout() {
   return (
     <div>
       <Slidebar />
-      <div className={`flex-1 flex flex-col transition-all ${menu ? 'w-full' : 'max-w-[80dvw] ml-[20dvw]'}`}>
+      <div className={`flex-1 flex flex-col transition-all   ${menu ? ' w-full' : 'max-w-[80dvw] ml-[20dvw]'}`}>
         <Header />
-        <div className=' mt-20'>
+        <div className=' mt-16'>
           <Outlet />
         </div>
       </div>
@@ -20,3 +20,4 @@ function Layout() {
 }
 
 export default Layout;
+

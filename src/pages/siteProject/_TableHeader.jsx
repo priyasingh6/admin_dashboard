@@ -2,7 +2,7 @@ import React from 'react';
 
 function TableHeader() {
   return (
-    <thead className='bg-gray-50 dark:bg-gray-700'>
+    <thead className='bg-gray-50 dark:bg-[#3D3D3D]'>
       <tr>
         <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase'>Sr. No</th>
         <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase'>Date</th>
